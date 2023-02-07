@@ -1,0 +1,22 @@
+model = keras.models.Sequential([
+    keras.layers.Flatten(input_shape = [68]),
+    keras.layers.Dense(units = 150 , activation = 'relu'), 
+    keras.layers.Dense(units = 200 , activation = 'relu'), 
+    keras.layers.Dense(units = 250 , activation = 'relu'),
+    keras.layers.Dense(units = 250 , activation = 'relu'),
+    keras.layers.Dense(units = 1 , activation = 'sigmoid')
+])
+
+
+
+[[10501   384]
+ [ 1348  1313]]
+              precision    recall  f1-score   support
+
+           0       0.89      0.96      0.92     10885
+           1       0.77      0.49      0.60      2661
+
+    accuracy                           0.87     13546
+   macro avg       0.83      0.73      0.76     13546
+weighted avg       0.86      0.87      0.86     13546
+
